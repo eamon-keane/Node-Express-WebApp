@@ -13,9 +13,7 @@ function bookController(bookService, nav) {
         debug('Connected correctly to server');
 
         const db = client.db(dbName);
-
         const col = await db.collection('books');
-
         const books = await col.find().toArray();
 
         res.render(
